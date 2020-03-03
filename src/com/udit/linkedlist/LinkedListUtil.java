@@ -5,7 +5,7 @@ import java.util.List;
 public class LinkedListUtil {
 	
 	public static <T> ListNode<T> createList(List<T> vals) {
-		if (vals.isEmpty()) {
+		if (vals == null || vals.isEmpty()) {
 			return null;
 		}
 		ListNode<T> head = new ListNode<>(vals.get(0));
