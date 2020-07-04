@@ -3,7 +3,7 @@ package com.udit.linkedlist;
 import java.util.List;
 
 public class LinkedListUtil {
-	
+
 	public static <T> ListNode<T> createList(List<T> vals) {
 		if (vals == null || vals.isEmpty()) {
 			return null;
@@ -21,15 +21,34 @@ public class LinkedListUtil {
 		return head;
 	}
 
+	public static <T> void append(ListNode<T> head, T val) {
+		ListNode<T> node = new ListNode<>(val);
+		ListNode<T> current = head;
+		while (current.next != null) {
+			current = current.next;
+		}
+		current.next = node;
+	}
+
+	public static <T> void append(ListNode<T> head, ListNode<T> node) {
+		
+		ListNode<T> current = head;
+		while (current.next != null) {
+			current = current.next;
+		}
+		current.next = node;	
+	}
+
 	public static <T> void traverseList(ListNode<T> head) {
-		if(head == null) {
+		if (head == null) {
 			System.out.println("Empty LinkedList");
 			return;
 		}
 		while (head.next != null) {
-			System.out.print(head.val + "-->");
+			System.out.print(head.val + " --> ");
 			head = head.next;
 		}
 		System.out.print(head.val);
+		System.out.println();
 	}
 }
