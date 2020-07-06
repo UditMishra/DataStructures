@@ -1,13 +1,12 @@
 package com.udit.linkedlist;
 
-import java.util.Arrays;
 import java.util.Stack;
 
 public class ReverseListUsingStack {
 
 	public static void main(String[] args) {
 
-		ListNode<Integer> list = LinkedListUtil.createList(Arrays.asList(1, 2, 3));
+		ListNode<Integer> list = LinkedListUtil.createList(1, 2, 3);
 		ListNode<Integer> rev = reverse(list);
 		LinkedListUtil.traverseList(rev);
 

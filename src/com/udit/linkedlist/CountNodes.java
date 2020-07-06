@@ -1,12 +1,10 @@
 package com.udit.linkedlist;
 
-import java.util.Arrays;
-
 public class CountNodes {
 
 	public static void main(String[] args) {
 		
-		ListNode<Integer> head = LinkedListUtil.createList(Arrays.asList(10, 20, 30, 40, 50));
+		ListNode<Integer> head = LinkedListUtil.createList(10, 20, 30, 40, 50);
 		
 		System.out.println("Node count = " + countNodes(head));
 	}

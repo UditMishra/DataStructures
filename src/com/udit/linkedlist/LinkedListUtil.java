@@ -1,20 +1,19 @@
 package com.udit.linkedlist;
 
-import java.util.List;
-
 public class LinkedListUtil {
 
-	public static <T> ListNode<T> createList(List<T> vals) {
-		if (vals == null || vals.isEmpty()) {
+	@SafeVarargs
+	public static <T> ListNode<T> createList(T... vals) {
+		if (vals == null || vals.length == 0) {
 			return null;
 		}
-		ListNode<T> head = new ListNode<>(vals.get(0));
-		if (vals.size() == 1) {
+		ListNode<T> head = new ListNode<>(vals[0]);
+		if (vals.length == 1) {
 			return head;
 		}
-		ListNode<T> prev = head;
-		for (int i = 1; i < vals.size(); i++) {
-			ListNode<T> node = new ListNode<>(vals.get(i));
+		ListNode<T> prev = head;	
+		for (int i = 1; i < vals.length; i++) {
+			ListNode<T> node = new ListNode<>(vals[i]);
 			prev.next = node;
 			prev = node;
 		}

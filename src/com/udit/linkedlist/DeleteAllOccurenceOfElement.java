@@ -1,12 +1,10 @@
 package com.udit.linkedlist;
 
-import java.util.Arrays;
-
 public class DeleteAllOccurenceOfElement {
 
 	public static void main(String[] args) {
 
-		ListNode<Integer> head = LinkedListUtil.createList(Arrays.asList(3, 11, 8, 3, 10, 2, 3, 11, 3, 9));
+		ListNode<Integer> head = LinkedListUtil.createList(3, 11, 8, 3, 10, 2, 3, 11, 3, 9);
 
 		ListNode<Integer> current = head;
 

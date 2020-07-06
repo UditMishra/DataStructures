@@ -1,13 +1,11 @@
 package com.udit.linkedlist;
 
-import java.util.Arrays;
-
 public class SumOfNumbersForward {
 
 	public static void main(String[] args) {
 
-		ListNode<Integer> num1 = LinkedListUtil.createList(Arrays.asList(9, 9, 5)); // 995
-		ListNode<Integer> num2 = LinkedListUtil.createList(Arrays.asList(8, 7, 3, 2)); // 8732
+		ListNode<Integer> num1 = LinkedListUtil.createList(9, 9, 5); // 995
+		ListNode<Integer> num2 = LinkedListUtil.createList(8, 7, 3, 2); // 8732
 
 		// 995 + 8732 = 9727(Stored as 9->7-->2-->7)
 

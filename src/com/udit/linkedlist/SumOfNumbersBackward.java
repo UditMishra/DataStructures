@@ -1,13 +1,11 @@
 package com.udit.linkedlist;
 
-import java.util.Arrays;
-
 public class SumOfNumbersBackward {
 
 	public static void main(String[] args) {
 
-		ListNode<Integer> num1 = LinkedListUtil.createList(Arrays.asList(5, 9, 9)); // 995
-		ListNode<Integer> num2 = LinkedListUtil.createList(Arrays.asList(2, 3, 7, 8)); // 8732
+		ListNode<Integer> num1 = LinkedListUtil.createList(5, 9, 9); // 995
+		ListNode<Integer> num2 = LinkedListUtil.createList(2, 3, 7, 8); // 8732
 
 		// 995 + 8732 = 9727(Stored as 7-->2-->7-->9)
 

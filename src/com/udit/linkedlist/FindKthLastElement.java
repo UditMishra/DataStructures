@@ -1,12 +1,10 @@
 package com.udit.linkedlist;
 
-import java.util.Arrays;
-
 public class FindKthLastElement {
 
 	public static void main(String[] args) {
 
-		ListNode<Integer> head = LinkedListUtil.createList(Arrays.asList(8, 3, 4, 3, 18, 2, 17, 5, 7, 1, 19));
+		ListNode<Integer> head = LinkedListUtil.createList(8, 3, 4, 3, 18, 2, 17, 5, 7, 1, 19);
 
 		int k = 3; // 3rd last element = 7
 

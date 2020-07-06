@@ -1,12 +1,10 @@
 package com.udit.linkedlist;
 
-import java.util.Arrays;
-
 public class DeleteAGivenMiddleNode {
 
 	public static void main(String[] args) {
 		
-		ListNode<Integer> head = LinkedListUtil.createList(Arrays.asList(1, 5, 9, 12));
+		ListNode<Integer> head = LinkedListUtil.createList(1, 5, 9, 12);
 		
 		deleteNode(head.next.next);
 		

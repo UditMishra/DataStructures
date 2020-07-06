@@ -1,12 +1,10 @@
 package com.udit.linkedlist;
 
-import java.util.Arrays;
-
 public class PartitionList {
 
 	public static void main(String[] args) {
 
-		ListNode<Integer> head = LinkedListUtil.createList(Arrays.asList(3, 5, 8, 5, 10, 2, 1));
+		ListNode<Integer> head = LinkedListUtil.createList(3, 5, 8, 5, 10, 2, 1);
 
 		int k = 5; // all < 5 at left, all >= 5 at right, 5 can be anywhere in right list
 

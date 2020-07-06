@@ -1,12 +1,10 @@
 package com.udit.linkedlist;
 
-import java.util.Arrays;
-
 public class FindIntersection {
 
 	public static void main(String[] args) {
 
-		ListNode<Integer> list1 = LinkedListUtil.createList(Arrays.asList(3, 2, 5, 6, 9, 8, 1, 7));
+		ListNode<Integer> list1 = LinkedListUtil.createList(3, 2, 5, 6, 9, 8, 1, 7);
 
 		ListNode<Integer> list2 = new ListNode<Integer>(11);
 		list2.next = list1.next.next.next.next.next;

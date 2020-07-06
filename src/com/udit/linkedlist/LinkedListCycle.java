@@ -1,6 +1,5 @@
 package com.udit.linkedlist;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -8,7 +7,7 @@ public class LinkedListCycle {
 
 	public static void main(String[] args) {
 
-		ListNode<Integer> head = LinkedListUtil.createList(Arrays.asList(5));
+		ListNode<Integer> head = LinkedListUtil.createList(5);
 
 		LinkedListUtil.append(head, 3);
 		LinkedListUtil.append(head, 2);
