@@ -4,19 +4,20 @@ public class ReverseList3Pointers {
 
 	public static void main(String[] args) {
 
-		ListNode<Integer> head = LinkedListUtil.createList(1, 2);
+		ListNode<Integer> head1 = LinkedListUtil.createList(1, 2);
 
-		ListNode<Integer> rev = reverseList(head);
+		ListNode<Integer> rev1 = reverseList1(head1);
+		LinkedListUtil.traverseList(rev1);
 
-		LinkedListUtil.traverseList(rev);
+		ListNode<Integer> head2 = LinkedListUtil.createList(100, 200, 300, 400, 500);
+
+		ListNode<Integer> rev2 = reverseList2(head2);
+		LinkedListUtil.traverseList(rev2);
 	}
 
-	private static ListNode<Integer> reverseList(ListNode<Integer> head) {
+	private static ListNode<Integer> reverseList1(ListNode<Integer> head) {
 
-		if (head == null) {
-			return null;
-		}
-		if (head.next == null) {
+		if (head == null || head.next == null) {
 			return head;
 		}
 		if (head.next.next == null) {
@@ -63,5 +64,27 @@ public class ReverseList3Pointers {
 		ptr3.next = ptr2;
 
 		return ptr3;
+	}
+
+	private static ListNode<Integer> reverseList2(ListNode<Integer> head) {
+
+		if (head == null || head.next == null) {
+			return head;
+		}
+
+		ListNode<Integer> current, prev, next;
+		prev = null;
+		current = head;
+		next = head.next;
+
+		while (current != null && current.next != null) {
+			current.next = prev;
+			prev = current;
+			current = next;
+			next = current.next;
+		}
+		current.next = prev;
+		return current;
+
 	}
 }

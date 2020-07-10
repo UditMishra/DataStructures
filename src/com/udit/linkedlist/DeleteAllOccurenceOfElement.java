@@ -4,25 +4,31 @@ public class DeleteAllOccurenceOfElement {
 
 	public static void main(String[] args) {
 
-		ListNode<Integer> head = LinkedListUtil.createList(3, 11, 8, 3, 10, 2, 3, 11, 3, 9);
+		ListNode<Integer> head = LinkedListUtil.createList(1);
+		int val = 1;
+		head = removeElements(head, val);
+		LinkedListUtil.traverseList(head);
+	}
+
+	public static ListNode<Integer> removeElements(ListNode<Integer> head, int val) {
+		if (head == null) {
+			return head;
+		}
 
 		ListNode<Integer> current = head;
 
-		int delete = 3;
-		
-		if(current.val == delete) {
-			head = current.next;
-		}
-
-		while (current.next != null) {
-
-			if (current.next.val == delete) {
+		while (current != null && current.next != null) {
+			if (current.val == val) {
+				current = head = current.next;
+			} else if (current.next.val == val) {
 				current.next = current.next.next;
 			} else {
 				current = current.next;
 			}
 		}
-
-		LinkedListUtil.traverseList(head);
+		if (head != null && head.val == val && head.next == null) {
+			return null;
+		}
+		return head;
 	}
 }
