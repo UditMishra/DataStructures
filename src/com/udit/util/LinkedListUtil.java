@@ -1,4 +1,4 @@
-package com.udit.linkedlist;
+package com.udit.util;
 
 public class LinkedListUtil {
 
